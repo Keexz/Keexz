@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @Keexz
 - 👀 I’m interested in coding 
-- 🌱 I’m currently learning Fintech 
-- 💞️ I’m looking to collaborate on an AI poject
+- 🌱 I’m currently learning Python
+- 💞️ I’m looking for someone to brighten my knowledge
 - 📫 How to reach me whatsapp 08025051938
 
 <!---
