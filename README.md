@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Keexz
 - 👀 I’m interested in coding 
-- 🌱 I’m currently a learner
+- 🌱 I’m a currently a web developer
 - 💞️ I’m looking for someone to brighten my knowledge
 - 📫 How to reach me WhatsApp 08025051938
 
