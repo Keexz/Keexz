@@ -1,19 +1,20 @@
 import time
-import pyautogui
-import subprocess
 import typer
 from speechengine import speechEngine
+import numpy
 
-def calculate(prompt:str):
+def calculate():
+    prompt = "calculate 1 + 20 + 5".split()
     
+    no = []
     
-    subprocess.Popen(['calc.exe'])
-    for i in prompt:
-        pyautogui.press(i)
-        time.sleep(2)
+    with typer.open_file('numbers.txt', encoding='utf-8-sig') as nums:
+        num = nums.read()
+        for i in prompt:
+            if i in num:
+                    no.append(int(i))
         
-        
-    pyautogui.press("=")
-    cal_final = "I'm done with the calculation."
-    typer.echo(message=f"\nSARA: {cal_final}\n")
-    speechEngine(cal_final)
+        if "+" in prompt:
+            typer.echo(numpy.sum(no))
+
+calculate()
