@@ -14,7 +14,7 @@ def planner():
     
     i = 0
     
-    with typer.open_file('plan.txt', mode='w') as plan:
+    with typer.open_file('set_plan.txt', mode='w') as plan:
         
         while i < planA_1+1: #Add one to the amount of my plan so i can write the name of my plan
             if i == 0: 

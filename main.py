@@ -20,24 +20,33 @@ def main():
     
     #Greetings
     if hour in morning:
-        m = 'Good morning sir.'
-        typer.echo(message=f"\n{x}: {m}\n")
-        speechEngine(m)
+        with typer.open_file('morning_greetings.txt', encoding="utf-8-sig") as mornings:
+            m_greets = mornings.readlines()
+            m_greet = random.choice(m_greets)
+            typer.echo(message=f"\n{x}: {m_greet}\n")
+            speechEngine(m_greet)
+        
     elif hour in afternoon:
-        a = 'Good afternoon sir.'
-        typer.echo(message=f"\n{x}: {a}\n")
-        speechEngine(a)
+        with typer.open_file('afternoon_greetings.txt', encoding="utf-8-sig") as afternoons:
+            a_greets = afternoons.readlines()
+            a_greet = random.choice(a_greets)
+            typer.echo(message=f"\n{x}: {a_greet}\n")
+            speechEngine(a_greet)
+            
     elif hour in evening:
-        e = 'Good evening sir.'
-        typer.echo(message=f"\n{x}: {e}\n")
-        speechEngine(e)
+        with typer.open_file('evening_greetings.txt', encoding="utf-8-sig") as evenings:
+            e_greets = evenings.readlines()
+            e_greet = random.choice(e_greets)
+            typer.echo(message=f"\n{x}: {e_greet}\n")
+            speechEngine(e_greet)
+    
     no = 0
     
     while device:
         #Ask question and awaits for prompt
         
         if no == 0:
-            with typer.open_file('question.txt') as what:
+            with typer.open_file('questions.txt', encoding="utf-8-sig") as what:
                 whats = what.readlines()
                 whats_choice = random.choice(whats)
                 typer.echo(message=f"\n{x}: {whats_choice}\n")
